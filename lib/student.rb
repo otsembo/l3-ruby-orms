@@ -69,7 +69,7 @@ class Student
         self.new(name: row[1],age: row[2], id: row[0])
     end
 
-# TODO: SEARCH FOR RECORD THAT MEETS CERTAIN CONDITIONS
+# TODO: SEARCH FOR RECORD THAT MEETS CERTAIN CONDITIONS (FIND OLDEST USER)
 
     private    
 
