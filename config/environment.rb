@@ -6,24 +6,29 @@ require_relative '../lib/student'
 
 
 # RUN CODE FROM HERE
+# reset table
+Student.reset
+
 # create table
 Student.create_table
 
-# student data
-ian = Student.new(age: 12, name: "Student")
-# insert record
-ian.create
+# create student data
+s1 = Student.new(name: "Jane Doe", age: 28)
+s2 = Student.new(name: "John Doe", age: 40)
+s3 = Student.new(name: "Albert Byrone", age: 50)
 
-# view all students
-Student.all
+# save student data
+s1.create
+s2.create
+s3.create
 
-# update student data
-# ian.name = "Ian"
-ian.age = 90
-ian.update
+# check student
+pp "Student 1: #{s1}"
 
-Student.all
+# view student data
+pp Student.all
 
-ian.destroy
+print "SEARCH RESULTS: "
+pp Student.search_by(name: "Doe")
 
-Student.all
+
